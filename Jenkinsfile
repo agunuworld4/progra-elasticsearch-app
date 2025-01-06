@@ -38,7 +38,7 @@ pipeline {
                      sh 'bash helm-ingress-installed.sh'
                     },
                     "prom grafana installed": {
-                      sh 'bash prometheus-grafana.sh'
+                      sh 'bash prom-gra-deployment.sh'
                       },
                       "Deploy ingress rule": {
                         sh 'bash ingresss_rules.sh'

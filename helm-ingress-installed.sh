@@ -4,7 +4,7 @@ chmod 700 get_helm.sh
 ./get_helm.sh
 
 sleep 2
-ls -lart 
+ls -lart
 #clone repo on server
 #git clone git@github.com:agunuworld4/pgrykubernetes-ingress.git
 #sleep 10
@@ -26,9 +26,11 @@ kubectl apply -f deployments/daemon-set/nginx-ingress.yaml
 
 sleep 10
 #For AWS, run:
+echo "creating gke loadbalancer in google cloud"
 kubectl apply -f deployments/service/loadbalancer-aws-elb.yaml
 
 #get the DNS name of the ELB, run
+echo "describing ingress service"
 kubectl describe svc nginx-ingress --namespace=nginx-ingress
 
 kubectl get svc -n nginx-ingress
