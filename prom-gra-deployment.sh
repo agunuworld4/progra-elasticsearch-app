@@ -18,4 +18,4 @@ helm upgrade --install  grafana grafana/grafana  -n monitoring
 sleep 40
 kubectl get secret --namespace monitoring grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 
-#kubectl apply -f montoring_rules.yml
+kubectl apply -f ingresss_rules.yml

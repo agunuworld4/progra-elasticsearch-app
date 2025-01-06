@@ -39,11 +39,8 @@ pipeline {
                     },
                     "prom grafana installed": {
                       sh 'bash prom-gra-deployment.sh'
-                      },
-                      "Deploy ingress rule": {
-                        sh 'bash ingresss_rules.sh'
-                        }
-                      )
+                      }
+                     )
                     }
                 }
 
