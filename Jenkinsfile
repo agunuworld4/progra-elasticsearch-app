@@ -25,10 +25,10 @@ pipeline {
           }
         }
 
-    stage('Deploy helm charts for prom and Grafana') {
-          steps {
-                sh "bash prometheus-grafana.sh"
-                }
+    // stage('Deploy helm charts for prom and Grafana') {
+    //       steps {
+    //             sh "bash prometheus-grafana.sh"
+    //             }
             }
 
     stage('Helm, ingress installed') {
@@ -47,10 +47,10 @@ pipeline {
                     }
                 }
 
-}  //This line end the pipeline stages
+  }  //This line end the pipeline stages
   //post {   //This line start the post script
   //      always {
     //     sendNotification currentBuild.result
-        }
+      //  }
   //}  //this line close post script stage
 }    //This line close the jenkins pipeline
