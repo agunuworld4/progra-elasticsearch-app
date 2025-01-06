@@ -1,5 +1,5 @@
 //${library.jenkins-slack-library.version}
-@Library('Slack-us-east-jenkins-prod') _
+//@Library('Slack-us-east-jenkins-prod') _
 
 pipeline {
 
@@ -15,7 +15,7 @@ pipeline {
         }
 
   environment {
-    BUILD_NUMBER = "${env.BUILD_ID}
+    BUILD_NUMBER ="${env.BUILD_ID}"
     }
 
   stages {
