@@ -29,7 +29,7 @@ pipeline {
     //       steps {
     //             sh "bash prometheus-grafana.sh"
     //             }
-            }
+      //      }
 
     stage('Helm, ingress installed') {
             steps {
