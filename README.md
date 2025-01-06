@@ -1,1 +1,1 @@
-# prometheus-grafana-monitoring
+# pgrykubernetes-ingress
