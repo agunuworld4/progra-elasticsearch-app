@@ -20,7 +20,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/mavne-web-app"
+        path: "/maven-web-app"
         backend:
           service:
             name: mss-maven-svc
@@ -33,6 +33,6 @@ spec:
         path: "/java-web-app"
         backend:
           service:
-            name: mss-svc-dock
+            name: mss-java-svc 
             port:
               number: 80
