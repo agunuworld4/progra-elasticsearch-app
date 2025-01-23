@@ -31,6 +31,8 @@ kubectl apply -f deployments/service/loadbalancer-aws-elb.yaml
 
 #get the DNS name of the ELB, run
 echo "describing ingress service"
+echo "kubectl describe svc nginx-ingress --namespace=nginx-ingress"
 kubectl describe svc nginx-ingress --namespace=nginx-ingress
 
+echo "Get LB svc kubectl get svc -n nginx-ingress"
 kubectl get svc -n nginx-ingress

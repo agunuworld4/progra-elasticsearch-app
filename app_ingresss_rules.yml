@@ -1,0 +1,38 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: app-ingress-rules
+  namespace: jjva-ns-svc-pod
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: mdb.eagunu4live.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: mss-springboot-svc
+            port:
+              number: 80
+  - host: mdb.eagunu4live.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/mavne-web-app"
+        backend:
+          service:
+            name: mss-maven-svc
+            port:
+              number: 80
+  - host: mdb.eagunu4live.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/java-web-app"
+        backend:
+          service:
+            name: mss-svc-dock
+            port:
+              number: 80
