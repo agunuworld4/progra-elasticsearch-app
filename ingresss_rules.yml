@@ -2,11 +2,11 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: prom-grafana-ing
-  namespace: ibm-ucd
+  namespace: jjva-ns-svc-pod
 spec:
   ingressClassName: nginx
   rules:
-    - host: prm.eagunu4live.cloud
+    - host: prm.eagunu4live.com
       http:
         paths:
           - pathType: Prefix
@@ -16,7 +16,7 @@ spec:
                 port:
                   number: 80
             path: /
-    - host: mgr.eagunu4live.cloud
+    - host: mgr.eagunu4live.com
       http:
         paths:
           - pathType: Prefix
@@ -26,7 +26,7 @@ spec:
                 port:
                   number: 80
             path: /
-    - host: gra.eagunu4live.cloud
+    - host: gra.eagunu4live.com
       http:
         paths:
           - pathType: Prefix
