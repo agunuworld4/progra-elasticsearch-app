@@ -23,4 +23,4 @@ kubectl apply -f monitor_ingresss_rules.yml
 sleep 10
 
 echo "Apply ingress rules for 3 jjva applications"
-kubectl apply -f monitor_ingresss_rules.yml
+kubectl apply -f app_ingresss_rules.yml
