@@ -15,10 +15,7 @@ spec:
           service:
             name: mss-springboot-svc
             port:
-              number: 80
-  - host: mdb.eagunu4live.com
-    http:
-      paths:
+             number: 80
       - pathType: Prefix
         path: "/maven-web-app"
         backend:
@@ -26,13 +23,10 @@ spec:
             name: mss-maven-svc
             port:
               number: 80
-  - host: mdb.eagunu4live.com
-    http:
-      paths:
       - pathType: Prefix
         path: "/java-web-app"
         backend:
           service:
-            name: mss-java-svc 
+            name: mss-java-svc
             port:
               number: 80
