@@ -6,7 +6,7 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-    - host: prm.eagunu4live.com
+    - host: prome.eagunu4live.com
       http:
         paths:
           - pathType: Prefix
@@ -16,23 +16,23 @@ spec:
                 port:
                   number: 80
             path: /
-    - host: mgr.eagunu4live.com
-      http:
-        paths:
-          - pathType: Prefix
-            backend:
-              service:
-                name: prometheus-alertmanager
-                port:
-                  number: 80
-            path: /
-    - host: gra.eagunu4live.com
+    - host: grafana.eagunu4live.com
       http:
         paths:
           - pathType: Prefix
             backend:
               service:
                 name: grafana
+                port:
+                  number: 80
+            path: /
+    - host: alert.eagunu4live.com
+      http:
+        paths:
+          - pathType: Prefix
+            backend:
+              service:
+                name: prometheus-alertmanager
                 port:
                   number: 80
             path: /
